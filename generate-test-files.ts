@@ -30,7 +30,7 @@ const featureAreas = [
 ]
 
 // Generate a template for each test file
-function generateTestFile(index) {
+function generateTestFile(index: number) {
 	const testType = testTypes[index % testTypes.length]
 	const featureArea = featureAreas[Math.floor(index / 10) % featureAreas.length]
 	const variationNumber = Math.floor(index / 100) + 1
