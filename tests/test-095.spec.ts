@@ -27,7 +27,7 @@ test("navigation-profile-test-95", async ({ page }) => {
 		await simulateHeavyComputation(complexityFactor + 1)
 
 		await page.goto("https://playwright.dev/docs/intro")
-		await expect(page).toHaveTitle(/Introduction/)
+		await expect(page).toHaveTitle(/Installation/)
 		await page.getByRole("link", { name: "Writing tests" }).click()
 		await expect(
 			page.getByRole("heading", { name: "Writing tests" })
