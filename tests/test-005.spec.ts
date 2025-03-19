@@ -27,7 +27,7 @@ test("navigation-dashboard-test-5", async ({ page }) => {
 
 		await page.goto("https://playwright.dev/docs/intro")
 		await expect(page).toHaveTitle(/Installation/)
-		await page.getByRole("link", { name: "Writing tests" }).click()
+		await page.getByRole("link", { name: "Writing tests" }).first().click()
 		await expect(
 			page.getByRole("heading", { name: "Writing tests" })
 		).toBeVisible()
