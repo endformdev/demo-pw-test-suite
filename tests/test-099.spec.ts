@@ -1,70 +1,57 @@
-import { expect, test } from "@playwright/test";
-import { 
-  runComplexTestScenario,
-  simulateNetworkDelay,
-  simulateHeavyComputation,
-  performComplexDOMOperations,
-  fillFormWithValidation,
-  simulateApiRequests,
-  performCanvasOperations,
-  simulateLargeDataInteraction,
-  loadHeavyResources
-} from "./test-utils";
+import { expect, test } from "@playwright/test"
+import {
+	fillFormWithValidation,
+	performComplexDOMOperations,
+	runComplexTestScenario,
+	simulateHeavyComputation,
+	simulateNetworkDelay,
+} from "../test-utils"
 
 /**
  * Complex component test for profile - variation 1
  * This test is designed to take 20-90 seconds to execute
  */
 test("component-profile-test-99", async ({ page }) => {
-  // Test scenario 99
-  await runComplexTestScenario(page, 99);
-  
-  // Add complexity variations based on test number to ensure diversity
-  const complexityFactor = 9;
-  
-  // Additional test-specific operations
-  await test.step("Performing component-specific operations", async () => {
-    await simulateNetworkDelay(page, 500 * complexityFactor, 1500 * complexityFactor);
-    await simulateHeavyComputation(complexityFactor + 1);
-    
-    await performComplexDOMOperations(page, 40 * complexityFactor);
-    
-    
-    
-    
-    
-    
-  });
-  
-  // Feature area specific tests
-  await test.step("Testing profile functionality", async () => {
-    
-    
-    
-    
-    
-    
-    
-    
-    await fillFormWithValidation(page, 8 * complexityFactor);
-    await simulateHeavyComputation(complexityFactor);
-    
-  });
-  
-  // Final assertions and validations
-  await test.step("Verifying results", async () => {
-    // Simulate final verifications
-    await simulateNetworkDelay(page, 500, 1500);
-    
-    // Create a dynamic verification point
-    await page.evaluate((testIndex) => {
-      const resultElement = document.createElement('div');
-      resultElement.id = 'test-result';
-      resultElement.textContent = `Test ${testIndex} completed successfully`;
-      document.body.appendChild(resultElement);
-      return resultElement.id;
-    }, 99);
-    
-    await expect(page.locator('#test-result')).toHaveText(`Test 99 completed successfully`);
-  });
-});
+	// Test scenario 99
+	await runComplexTestScenario(page, 99)
+
+	// Add complexity variations based on test number to ensure diversity
+	const complexityFactor = 9
+
+	// Additional test-specific operations
+	await test.step("Performing component-specific operations", async () => {
+		await simulateNetworkDelay(
+			page,
+			500 * complexityFactor,
+			1500 * complexityFactor
+		)
+		await simulateHeavyComputation(complexityFactor + 1)
+
+		await performComplexDOMOperations(page, 40 * complexityFactor)
+	})
+
+	// Feature area specific tests
+	await test.step("Testing profile functionality", async () => {
+		await fillFormWithValidation(page, 8 * complexityFactor)
+		await simulateHeavyComputation(complexityFactor)
+	})
+
+	// Final assertions and validations
+	await test.step("Verifying results", async () => {
+		// Simulate final verifications
+		await simulateNetworkDelay(page, 500, 1500)
+
+		// Create a dynamic verification point
+		await page.evaluate((testIndex) => {
+			const resultElement = document.createElement("div")
+			resultElement.id = "test-result"
+			resultElement.textContent = `Test ${testIndex} completed successfully`
+			document.body.appendChild(resultElement)
+			return resultElement.id
+		}, 99)
+
+		await expect(page.locator("#test-result")).toHaveText(
+			`Test 99 completed successfully`
+		)
+	})
+})

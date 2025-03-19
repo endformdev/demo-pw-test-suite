@@ -50,7 +50,7 @@ import {
   performCanvasOperations,
   simulateLargeDataInteraction,
   loadHeavyResources
-} from "./test-utils";
+} from "../test-utils";
 
 /**
  * Complex ${testType} test for ${featureArea} - variation ${variationNumber}

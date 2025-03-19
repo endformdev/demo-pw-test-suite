@@ -1,75 +1,65 @@
-import { expect, test } from "@playwright/test";
-import { 
-  runComplexTestScenario,
-  simulateNetworkDelay,
-  simulateHeavyComputation,
-  performComplexDOMOperations,
-  fillFormWithValidation,
-  simulateApiRequests,
-  performCanvasOperations,
-  simulateLargeDataInteraction,
-  loadHeavyResources
-} from "./test-utils";
+import { expect, test } from "@playwright/test"
+import {
+	performComplexDOMOperations,
+	runComplexTestScenario,
+	simulateHeavyComputation,
+	simulateNetworkDelay,
+} from "../test-utils"
 
 /**
  * Complex ui test for dashboard - variation 1
  * This test is designed to take 20-90 seconds to execute
  */
 test("ui-dashboard-test-2", async ({ page }) => {
-  // Test scenario 2
-  await runComplexTestScenario(page, 2);
-  
-  // Add complexity variations based on test number to ensure diversity
-  const complexityFactor = 2;
-  
-  // Additional test-specific operations
-  await test.step("Performing ui-specific operations", async () => {
-    await simulateNetworkDelay(page, 500 * complexityFactor, 1500 * complexityFactor);
-    await simulateHeavyComputation(complexityFactor + 1);
-    
-    await performComplexDOMOperations(page, 40 * complexityFactor);
-    
-    
-    
-    
-    
-    
-  });
-  
-  // Feature area specific tests
-  await test.step("Testing dashboard functionality", async () => {
-    
-    await page.goto("https://demo.playwright.dev/todomvc");
-    for (let i = 0; i < 5 * complexityFactor; i++) {
-      await page.getByPlaceholder("What needs to be done?").fill(`Task ${i + 1}`);
-      await page.getByPlaceholder("What needs to be done?").press("Enter");
-      await simulateNetworkDelay(page, 100, 300);
-    }
-    await expect(page.getByTestId("todo-title")).toHaveCount(5 * complexityFactor);
-    
-    
-    
-    
-    
-    
-    
-    
-  });
-  
-  // Final assertions and validations
-  await test.step("Verifying results", async () => {
-    // Simulate final verifications
-    await simulateNetworkDelay(page, 500, 1500);
-    
-    // Create a dynamic verification point
-    await page.evaluate((testIndex) => {
-      const resultElement = document.createElement('div');
-      resultElement.id = 'test-result';
-      resultElement.textContent = `Test ${testIndex} completed successfully`;
-      document.body.appendChild(resultElement);
-      return resultElement.id;
-    }, 2);
-    
-    await expect(page.locator('#test-result')).toHaveText(`Test 2 completed successfully`);
-  });
-});
+	// Test scenario 2
+	await runComplexTestScenario(page, 2)
+
+	// Add complexity variations based on test number to ensure diversity
+	const complexityFactor = 2
+
+	// Additional test-specific operations
+	await test.step("Performing ui-specific operations", async () => {
+		await simulateNetworkDelay(
+			page,
+			500 * complexityFactor,
+			1500 * complexityFactor
+		)
+		await simulateHeavyComputation(complexityFactor + 1)
+
+		await performComplexDOMOperations(page, 40 * complexityFactor)
+	})
+
+	// Feature area specific tests
+	await test.step("Testing dashboard functionality", async () => {
+		await page.goto("https://demo.playwright.dev/todomvc")
+		for (let i = 0; i < 5 * complexityFactor; i++) {
+			await page
+				.getByPlaceholder("What needs to be done?")
+				.fill(`Task ${i + 1}`)
+			await page.getByPlaceholder("What needs to be done?").press("Enter")
+			await simulateNetworkDelay(page, 100, 300)
+		}
+		await expect(page.getByTestId("todo-title")).toHaveCount(
+			5 * complexityFactor
+		)
+	})
+
+	// Final assertions and validations
+	await test.step("Verifying results", async () => {
+		// Simulate final verifications
+		await simulateNetworkDelay(page, 500, 1500)
+
+		// Create a dynamic verification point
+		await page.evaluate((testIndex) => {
+			const resultElement = document.createElement("div")
+			resultElement.id = "test-result"
+			resultElement.textContent = `Test ${testIndex} completed successfully`
+			document.body.appendChild(resultElement)
+			return resultElement.id
+		}, 2)
+
+		await expect(page.locator("#test-result")).toHaveText(
+			`Test 2 completed successfully`
+		)
+	})
+})
