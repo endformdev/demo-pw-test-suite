@@ -7,7 +7,7 @@ export default defineConfig({
 	workers: process.env.CI ? 1 : undefined,
 	timeout: 3 * 60 * 1000,
 
-	reporter: "html",
+	reporter: [["list"], ["html"]],
 	use: {
 		trace: "on-first-retry",
 	},
