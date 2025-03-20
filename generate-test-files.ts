@@ -29,11 +29,13 @@ const featureAreas = [
 	"profile",
 ]
 
+const TEST_COUNT = 50
+
 // Generate a template for each test file
 function generateTestFile(index: number) {
 	const testType = testTypes[index % testTypes.length]
 	const featureArea = featureAreas[Math.floor(index / 10) % featureAreas.length]
-	const variationNumber = Math.floor(index / 100) + 1
+	const variationNumber = Math.floor(index / TEST_COUNT) + 1
 
 	// Create unique test name
 	const testName = `${testType}-${featureArea}-test-${index + 1}`
@@ -212,8 +214,6 @@ test("${testName}", async ({ page }) => {
 		content: testContent,
 	}
 }
-
-const TEST_COUNT = 100
 
 // Generate and save all test files
 for (let i = 0; i < TEST_COUNT; i++) {
