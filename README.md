@@ -1,6 +1,6 @@
 # Benchmark Test Suite
 
-This directory contains 100 different Playwright tests designed to benchmark test runner performance. Each test is configured to take approximately 20-90 seconds to execute by performing various complex operations.
+This directory contains 100 different Playwright tests designed to benchmark test runner performance. Each test is configured to take approximately 10-40 seconds to execute by performing various complex operations.
 
 ## Overview
 

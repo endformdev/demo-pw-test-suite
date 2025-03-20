@@ -9,8 +9,8 @@ import { type Page, expect } from "@playwright/test"
  */
 export async function simulateNetworkDelay(
 	page: Page,
-	minMs = 1000,
-	maxMs = 3000
+	minMs = 500,
+	maxMs = 1500
 ): Promise<void> {
 	const delay = Math.floor(Math.random() * (maxMs - minMs + 1)) + minMs
 	await page.waitForTimeout(delay)
@@ -19,10 +19,10 @@ export async function simulateNetworkDelay(
 /**
  * Performs CPU-intensive operations to simulate workload
  */
-export async function simulateHeavyComputation(iterations = 5): Promise<void> {
+export async function simulateHeavyComputation(iterations = 3): Promise<void> {
 	for (let i = 0; i < iterations; i++) {
 		// Create large arrays and perform operations on them
-		const arraySize = 500000
+		const arraySize = 250000
 		const array = Array.from({ length: arraySize }, () => Math.random())
 
 		// Sort the array (CPU intensive)
@@ -38,7 +38,7 @@ export async function simulateHeavyComputation(iterations = 5): Promise<void> {
  */
 export async function performComplexDOMOperations(
 	page: Page,
-	elementCount = 50
+	elementCount = 25
 ): Promise<void> {
 	// Execute complex DOM operations in the browser context
 	await page.evaluate((count) => {
@@ -95,7 +95,7 @@ export async function performComplexDOMOperations(
  */
 export async function fillFormWithValidation(
 	page: Page,
-	fieldCount = 10
+	fieldCount = 5
 ): Promise<void> {
 	await page.evaluate((count) => {
 		// Create a complex form
@@ -200,7 +200,7 @@ export async function fillFormWithValidation(
  */
 export async function simulateApiRequests(
 	page: Page,
-	requestCount = 5
+	requestCount = 3
 ): Promise<void> {
 	// Set up response interception for test data
 	await page.route("**/api/test-data/**", async (route) => {
@@ -238,7 +238,7 @@ export async function simulateApiRequests(
  */
 export async function performCanvasOperations(
 	page: Page,
-	complexity = 5
+	complexity = 3
 ): Promise<void> {
 	await page.evaluate((level) => {
 		const canvas = document.createElement("canvas")
@@ -315,7 +315,7 @@ export async function performCanvasOperations(
  */
 export async function simulateLargeDataInteraction(
 	page: Page,
-	itemCount = 1000
+	itemCount = 500
 ): Promise<void> {
 	// Create a large virtual list
 	await page.evaluate((count) => {
@@ -392,7 +392,7 @@ export async function simulateLargeDataInteraction(
  */
 export async function loadHeavyResources(
 	page: Page,
-	resourceCount = 5
+	resourceCount = 3
 ): Promise<void> {
 	await page.evaluate((count) => {
 		const container = document.createElement("div")
@@ -434,7 +434,7 @@ export async function loadHeavyResources(
 }
 
 /**
- * Generate complex test scenario that will take between 20-90 seconds
+ * Generate complex test scenario that will take between 10-40 seconds
  */
 export async function runComplexTestScenario(
 	page: Page,
@@ -448,30 +448,30 @@ export async function runComplexTestScenario(
 	await expect(page).toHaveTitle(/Playwright/)
 
 	// Step 2: Perform DOM manipulations
-	await performComplexDOMOperations(page, 50 * complexityFactor)
+	await performComplexDOMOperations(page, 25 * complexityFactor)
 
 	// Step 3: Simulate network delays and API calls
-	await simulateApiRequests(page, 3 + complexityFactor)
+	await simulateApiRequests(page, 2 + complexityFactor)
 
 	// Step 4: Perform CPU-intensive operations
-	await simulateHeavyComputation(complexityFactor)
+	await simulateHeavyComputation(Math.ceil(complexityFactor / 2))
 
 	// Step 5: Interact with form elements
-	await fillFormWithValidation(page, 10 + complexityFactor * 2)
+	await fillFormWithValidation(page, 5 + complexityFactor)
 
 	// Step 6: Canvas operations for visual rendering load
-	await performCanvasOperations(page, complexityFactor)
+	await performCanvasOperations(page, Math.ceil(complexityFactor / 2))
 
 	// Step 7: Simulate scrolling through large datasets
-	await simulateLargeDataInteraction(page, 500 * complexityFactor)
+	await simulateLargeDataInteraction(page, 200 * complexityFactor)
 
 	// Step 8: Load heavy resources
-	await loadHeavyResources(page, complexityFactor)
+	await loadHeavyResources(page, Math.ceil(complexityFactor / 2))
 
 	// Additional network delay to ensure total test time is adequate
 	await simulateNetworkDelay(
 		page,
-		1000 * complexityFactor,
-		3000 * complexityFactor
+		500 * complexityFactor,
+		1000 * complexityFactor
 	)
 }

@@ -8,7 +8,7 @@ import {
 
 /**
  * Complex api test for dashboard - variation 1
- * This test is designed to take 20-90 seconds to execute
+ * This test is designed to take 10-40 seconds to execute
  */
 test("api-dashboard-test-1", async ({ page }) => {
 	// Test scenario 1
