@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      endform:
+        specifier: 0.7.1
+        version: 0.7.1
+      endform-linux-x86:
+        specifier: 0.7.1
+        version: 0.7.1
     devDependencies:
       '@playwright/test':
         specifier: 1.51.1
@@ -24,6 +31,34 @@ packages:
 
   '@types/node@22.13.10':
     resolution: {integrity: sha512-I6LPUvlRH+O6VRUqYOcMudhaIdUVWfsjnZavnsraHvpBwaEyMN29ry+0UVJhImYL16xsscu0aske3yA+uPOWfw==}
+
+  endform-darwin-arm64@0.7.1:
+    resolution: {integrity: sha512-OhV3zMK9yd5t/cJd/D3zESqLTtq0g0XCPdcPDQozwgfgdTsuko841Rvs3swnLiGizVxQOIBJxeyD40CKSyJlbQ==}
+    cpu: [arm64]
+    os: [darwin]
+    hasBin: true
+
+  endform-darwin-x86@0.7.1:
+    resolution: {integrity: sha512-eUrtkAB4Y13g6xXzZU8GqRJw4fRwNAAvWDw4SR15JQ+uIWhKnpopzyqa93EXipRxzp1q1awbTlS6NPe9xsPPPw==}
+    cpu: [x86]
+    os: [darwin]
+    hasBin: true
+
+  endform-linux-arm64@0.7.1:
+    resolution: {integrity: sha512-DcvNPeRgy6m4Ur2aqvIoorE1nL2nJyHkA4/N5H9aHSZwDTQdKz7SYkNz3aKLunwrjoTeWUByuZkmI08j97RxtA==}
+    cpu: [arm64]
+    os: [linux]
+    hasBin: true
+
+  endform-linux-x86@0.7.1:
+    resolution: {integrity: sha512-AZMkPBRkDL/TgbBKreN9kMAe4MzBpJuMGi5qnGZi8ZJSva0yypByepSwUzDHgLzG9EZSppbL2/OhIwEX7hoFfQ==}
+    cpu: [x86]
+    os: [linux]
+    hasBin: true
+
+  endform@0.7.1:
+    resolution: {integrity: sha512-6DPctcXm67Ey1Ct0CZ+NqfukmWZBKqpTAT+rck4+xuGwoTLx8axWoBpnytspZjRM5DcV6KJIl2JH53AnFFP4mg==}
+    hasBin: true
 
   fsevents@2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
@@ -52,6 +87,24 @@ snapshots:
   '@types/node@22.13.10':
     dependencies:
       undici-types: 6.20.0
+
+  endform-darwin-arm64@0.7.1:
+    optional: true
+
+  endform-darwin-x86@0.7.1:
+    optional: true
+
+  endform-linux-arm64@0.7.1:
+    optional: true
+
+  endform-linux-x86@0.7.1: {}
+
+  endform@0.7.1:
+    optionalDependencies:
+      endform-darwin-arm64: 0.7.1
+      endform-darwin-x86: 0.7.1
+      endform-linux-arm64: 0.7.1
+      endform-linux-x86: 0.7.1
 
   fsevents@2.3.2:
     optional: true

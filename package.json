@@ -1,11 +1,15 @@
 {
 	"name": "demo-pw-test-suite",
-	"packageManager": "pnpm@10.6.2",
+	"packageManager": "pnpm@10.6.5",
 	"scripts": {
 		"test": "playwright test"
 	},
 	"devDependencies": {
 		"@playwright/test": "1.51.1",
 		"@types/node": "22.13.10"
+	},
+	"dependencies": {
+		"endform": "0.7.1",
+		"endform-linux-x86": "0.7.1"
 	}
 }
