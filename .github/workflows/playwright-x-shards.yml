@@ -35,11 +35,3 @@ jobs:
 
       - name: Run Playwright tests
         run: pnpm playwright test --reporter=blob --reporter=list --shard=${{ inputs.shardIndex }}/${{ inputs.shardTotal }}
-
-      - name: Upload blob report to GitHub Actions Artifacts
-        if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: blob-report-${{ inputs.shardIndex }}
-          path: blob-report
-          retention-days: 1

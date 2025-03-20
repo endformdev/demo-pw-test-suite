@@ -40,9 +40,3 @@ jobs:
     with:
       shardIndex: ${{ matrix.shardIndex }}
       shardTotal: ${{ matrix.shardTotal }}
-
-  merge-reports:
-    # Merge reports after playwright-tests, even if some shards have failed
-    if: ${{ !cancelled() }}
-    needs: [test]
-    uses: endformdev/demo-pw-test-suite/.github/workflows/playwright-html-report.yml@main
