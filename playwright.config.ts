@@ -6,7 +6,7 @@ export default defineConfig({
 	retries: process.env.CI ? 2 : 0,
 	timeout: 3 * 60 * 1000,
 
-	reporter: [["list"], ["html"]],
+	reporter: [["list"]],
 	use: {
 		trace: "on-first-retry",
 	},
