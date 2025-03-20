@@ -9,14 +9,13 @@ import {
 
 /**
  * Complex interaction test for user-management - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("interaction-user-management-test-24", async ({ page }) => {
-	// Test scenario 24
-	await runComplexTestScenario(page, 24)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 4
+	const complexityFactor = 9
+
+	// Test scenario 24
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing interaction-specific operations", async () => {

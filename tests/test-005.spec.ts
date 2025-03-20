@@ -7,14 +7,13 @@ import {
 
 /**
  * Complex navigation test for dashboard - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("navigation-dashboard-test-5", async ({ page }) => {
-	// Test scenario 5
-	await runComplexTestScenario(page, 5)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 5
+	const complexityFactor = 3
+
+	// Test scenario 5
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing navigation-specific operations", async () => {

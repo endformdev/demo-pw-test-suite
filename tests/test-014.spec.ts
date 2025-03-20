@@ -10,14 +10,13 @@ import {
 
 /**
  * Complex interaction test for authentication - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("interaction-authentication-test-14", async ({ page }) => {
-	// Test scenario 14
-	await runComplexTestScenario(page, 14)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 4
+	const complexityFactor = 9
+
+	// Test scenario 14
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing interaction-specific operations", async () => {

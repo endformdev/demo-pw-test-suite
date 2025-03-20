@@ -438,11 +438,8 @@ export async function loadHeavyResources(
  */
 export async function runComplexTestScenario(
 	page: Page,
-	scenarioNumber: number
+	complexityFactor: number
 ): Promise<void> {
-	// Use scenario number to create variation in test complexity
-	const complexityFactor = (scenarioNumber % 10) + 1
-
 	// Step 1: Navigate to a page and wait for it to load
 	await page.goto("https://playwright.dev/")
 	await expect(page).toHaveTitle(/Playwright/)

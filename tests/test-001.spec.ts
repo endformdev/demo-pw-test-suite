@@ -8,14 +8,13 @@ import {
 
 /**
  * Complex api test for dashboard - variation 1
- * This test is designed to take 10-40 seconds to execute
  */
 test("api-dashboard-test-1", async ({ page }) => {
-	// Test scenario 1
-	await runComplexTestScenario(page, 1)
-
 	// Add complexity variations based on test number to ensure diversity
 	const complexityFactor = 1
+
+	// Test scenario 1
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing api-specific operations", async () => {

@@ -31,6 +31,16 @@ const featureAreas = [
 
 const TEST_COUNT = 50
 
+/**
+ * Odd count up from 1 to 5, then restart.
+ * Event count down from 10 to 6, then restart.
+ * This ensure fast tests are paired with slow tests when sharding.
+ */
+function calculateComplexityFactor(n: number) {
+	if (n % 2 === 0) return 11 - (((n - 1) % 10) + 1) / 2
+	return ((n % 10) + 1) / 2
+}
+
 // Generate a template for each test file
 function generateTestFile(index: number) {
 	const testType = testTypes[index % testTypes.length]
@@ -56,14 +66,13 @@ import {
 
 /**
  * Complex ${testType} test for ${featureArea} - variation ${variationNumber}
- * This test is designed to take 20-90 seconds to execute
  */
 test("${testName}", async ({ page }) => {
-  // Test scenario ${index + 1}
-  await runComplexTestScenario(page, ${index + 1});
-
   // Add complexity variations based on test number to ensure diversity
-  const complexityFactor = ${(index % 10) + 1};
+  const complexityFactor = ${calculateComplexityFactor(index + 1)};
+
+  // Test scenario ${index + 1}
+  await runComplexTestScenario(page, complexityFactor);
 
   // Additional test-specific operations
   await test.step("Performing ${testType}-specific operations", async () => {
@@ -218,7 +227,7 @@ test("${testName}", async ({ page }) => {
 // Generate and save all test files
 for (let i = 0; i < TEST_COUNT; i++) {
 	const { filename, content } = generateTestFile(i)
-	fs.writeFileSync(path.join(__dirname, filename), content)
+	fs.writeFileSync(path.join(__dirname, "tests", filename), content)
 	console.log(`Generated: ${filename}`)
 }
 

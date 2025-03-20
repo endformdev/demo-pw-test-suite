@@ -8,14 +8,13 @@ import {
 
 /**
  * Complex visual test for dashboard - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("visual-dashboard-test-8", async ({ page }) => {
-	// Test scenario 8
-	await runComplexTestScenario(page, 8)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 8
+	const complexityFactor = 7
+
+	// Test scenario 8
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing visual-specific operations", async () => {

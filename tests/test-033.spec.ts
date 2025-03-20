@@ -11,14 +11,13 @@ import {
 
 /**
  * Complex performance test for settings - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("performance-settings-test-33", async ({ page }) => {
-	// Test scenario 33
-	await runComplexTestScenario(page, 33)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 3
+	const complexityFactor = 2
+
+	// Test scenario 33
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing performance-specific operations", async () => {

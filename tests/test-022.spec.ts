@@ -9,14 +9,13 @@ import {
 
 /**
  * Complex ui test for user-management - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("ui-user-management-test-22", async ({ page }) => {
-	// Test scenario 22
-	await runComplexTestScenario(page, 22)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 2
+	const complexityFactor = 10
+
+	// Test scenario 22
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing ui-specific operations", async () => {

@@ -9,14 +9,13 @@ import {
 
 /**
  * Complex navigation test for authentication - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("navigation-authentication-test-15", async ({ page }) => {
-	// Test scenario 15
-	await runComplexTestScenario(page, 15)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 5
+	const complexityFactor = 3
+
+	// Test scenario 15
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing navigation-specific operations", async () => {

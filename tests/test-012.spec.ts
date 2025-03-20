@@ -10,14 +10,13 @@ import {
 
 /**
  * Complex ui test for authentication - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("ui-authentication-test-12", async ({ page }) => {
-	// Test scenario 12
-	await runComplexTestScenario(page, 12)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 2
+	const complexityFactor = 10
+
+	// Test scenario 12
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing ui-specific operations", async () => {

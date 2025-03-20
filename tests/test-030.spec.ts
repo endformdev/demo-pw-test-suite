@@ -8,14 +8,13 @@ import {
 
 /**
  * Complex e2e test for user-management - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("e2e-user-management-test-30", async ({ page }) => {
-	// Test scenario 30
-	await runComplexTestScenario(page, 30)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 10
+	const complexityFactor = 6
+
+	// Test scenario 30
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing e2e-specific operations", async () => {

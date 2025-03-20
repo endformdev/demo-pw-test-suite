@@ -9,14 +9,13 @@ import {
 
 /**
  * Complex api test for authentication - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("api-authentication-test-11", async ({ page }) => {
-	// Test scenario 11
-	await runComplexTestScenario(page, 11)
-
 	// Add complexity variations based on test number to ensure diversity
 	const complexityFactor = 1
+
+	// Test scenario 11
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing api-specific operations", async () => {

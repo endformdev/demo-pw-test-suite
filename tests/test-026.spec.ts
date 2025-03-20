@@ -8,14 +8,13 @@ import {
 
 /**
  * Complex form test for user-management - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("form-user-management-test-26", async ({ page }) => {
-	// Test scenario 26
-	await runComplexTestScenario(page, 26)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 6
+	const complexityFactor = 8
+
+	// Test scenario 26
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing form-specific operations", async () => {

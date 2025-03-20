@@ -9,14 +9,13 @@ import {
 
 /**
  * Complex ui test for reports - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("ui-reports-test-42", async ({ page }) => {
-	// Test scenario 42
-	await runComplexTestScenario(page, 42)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 2
+	const complexityFactor = 10
+
+	// Test scenario 42
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing ui-specific operations", async () => {

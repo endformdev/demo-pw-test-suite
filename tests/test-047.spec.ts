@@ -8,14 +8,13 @@ import {
 
 /**
  * Complex accessibility test for reports - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("accessibility-reports-test-47", async ({ page }) => {
-	// Test scenario 47
-	await runComplexTestScenario(page, 47)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 7
+	const complexityFactor = 4
+
+	// Test scenario 47
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing accessibility-specific operations", async () => {

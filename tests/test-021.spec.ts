@@ -9,14 +9,13 @@ import {
 
 /**
  * Complex api test for user-management - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("api-user-management-test-21", async ({ page }) => {
-	// Test scenario 21
-	await runComplexTestScenario(page, 21)
-
 	// Add complexity variations based on test number to ensure diversity
 	const complexityFactor = 1
+
+	// Test scenario 21
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing api-specific operations", async () => {

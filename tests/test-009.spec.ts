@@ -8,14 +8,13 @@ import {
 
 /**
  * Complex component test for dashboard - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("component-dashboard-test-9", async ({ page }) => {
-	// Test scenario 9
-	await runComplexTestScenario(page, 9)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 9
+	const complexityFactor = 5
+
+	// Test scenario 9
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing component-specific operations", async () => {

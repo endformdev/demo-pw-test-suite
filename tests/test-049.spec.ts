@@ -9,14 +9,13 @@ import {
 
 /**
  * Complex component test for reports - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("component-reports-test-49", async ({ page }) => {
-	// Test scenario 49
-	await runComplexTestScenario(page, 49)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 9
+	const complexityFactor = 5
+
+	// Test scenario 49
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing component-specific operations", async () => {

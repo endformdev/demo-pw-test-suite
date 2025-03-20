@@ -11,14 +11,13 @@ import {
 
 /**
  * Complex performance test for user-management - variation 1
- * This test is designed to take 20-90 seconds to execute
  */
 test("performance-user-management-test-23", async ({ page }) => {
-	// Test scenario 23
-	await runComplexTestScenario(page, 23)
-
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 3
+	const complexityFactor = 2
+
+	// Test scenario 23
+	await runComplexTestScenario(page, complexityFactor)
 
 	// Additional test-specific operations
 	await test.step("Performing performance-specific operations", async () => {
