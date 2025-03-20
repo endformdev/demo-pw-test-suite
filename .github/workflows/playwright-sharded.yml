@@ -1,16 +1,18 @@
-name: Playwright Tests - sharded on 5 machines
+name: Playwright Tests - sharded
 on:
-  workflow_dispatch:
+  workflow_call:
+    inputs:
+      shardIndex:
+        required: true
+        type: number
+      shardTotal:
+        required: true
+        type: number
 
 jobs:
   test:
     timeout-minutes: 20
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        shardIndex: [1, 2, 3, 4, 5]
-        shardTotal: [5]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -32,13 +34,13 @@ jobs:
         run: pnpm playwright install --with-deps chromium-headless-shell
 
       - name: Run Playwright tests
-        run: pnpm playwright test --reporter=blob --reporter=list --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+        run: pnpm playwright test --reporter=blob --reporter=list --shard=${{ inputs.shardIndex }}/${{ inputs.shardTotal }}
 
       - name: Upload blob report to GitHub Actions Artifacts
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
-          name: blob-report-${{ matrix.shardIndex }}
+          name: blob-report-${{ inputs.shardIndex }}
           path: blob-report
           retention-days: 1
 

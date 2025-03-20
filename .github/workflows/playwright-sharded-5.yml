@@ -1,0 +1,15 @@
+name: Playwright Tests - sharded on 5 machines
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: endformdev/demo-pw-test-suite/.github/workflows/playwright-sharded.yml@main
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3, 4, 5]
+        shardTotal: [5]
+    with:
+      shardIndex: ${{ matrix.shardIndex }}
+      shardTotal: ${{ matrix.shardTotal }}
