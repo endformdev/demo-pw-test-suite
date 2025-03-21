@@ -224,8 +224,15 @@ export async function simulateApiRequests(
 
 	// Perform multiple API requests
 	for (let i = 0; i < requestCount; i++) {
-		await page.evaluate((index) => {
-			return fetch(`/api/test-data/${index}`).then((r) => r.json())
+		await page.evaluate(async (index) => {
+			const response = await fetch(`/api/test-data/${index}`)
+			if (!response.ok) {
+				const text = await response.text()
+				console.error(`Failed to fetch data: ${response.statusText} ${text}`)
+			} else {
+				const data = await response.json()
+				console.log(data)
+			}
 		}, i)
 
 		// Add processing time between requests
