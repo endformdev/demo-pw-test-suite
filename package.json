@@ -6,10 +6,7 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "1.51.1",
-		"@types/node": "22.13.10"
-	},
-	"dependencies": {
-		"endform": "0.8.4",
-		"endform-linux-x86": "0.7.1"
+		"@types/node": "22.13.10",
+		"endform": "0.8.4"
 	}
 }

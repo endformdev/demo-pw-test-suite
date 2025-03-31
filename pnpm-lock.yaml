@@ -7,13 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      endform:
-        specifier: 0.8.4
-        version: 0.8.4
-      endform-linux-x86:
-        specifier: 0.7.1
-        version: 0.7.1
     devDependencies:
       '@playwright/test':
         specifier: 1.51.1
@@ -21,6 +14,9 @@ importers:
       '@types/node':
         specifier: 22.13.10
         version: 22.13.10
+      endform:
+        specifier: 0.8.4
+        version: 0.8.4
 
 packages:
 
@@ -47,11 +43,6 @@ packages:
   endform-linux-arm64@0.8.4:
     resolution: {integrity: sha512-R4Ca2NTAOmmsd8AQUiRO8546IxAipuui7wMfaB5MWz425UmmovKRWDWVcMuYPw1w6Z5gPvKOkpohKiY/c6HXmQ==}
     cpu: [arm64]
-    os: [linux]
-    hasBin: true
-
-  endform-linux-x86@0.7.1:
-    resolution: {integrity: sha512-AZMkPBRkDL/TgbBKreN9kMAe4MzBpJuMGi5qnGZi8ZJSva0yypByepSwUzDHgLzG9EZSppbL2/OhIwEX7hoFfQ==}
     os: [linux]
     hasBin: true
 
@@ -101,8 +92,6 @@ snapshots:
 
   endform-linux-arm64@0.8.4:
     optional: true
-
-  endform-linux-x86@0.7.1: {}
 
   endform-linux-x86@0.8.4:
     optional: true
