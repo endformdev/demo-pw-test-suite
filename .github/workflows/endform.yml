@@ -13,7 +13,7 @@ jobs:
           node-version: lts/*
 
       - name: Install dependencies
-        run: npm install -g pnpm && pnpm install
+        run: npm install -g endform --include-optional && npm install -g pnpm && pnpm install
 
       - name: Run tests with Endform
         run: pnpm endform test

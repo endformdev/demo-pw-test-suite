@@ -14,9 +14,6 @@ importers:
       '@types/node':
         specifier: 22.13.10
         version: 22.13.10
-      endform:
-        specifier: 0.8.4
-        version: 0.8.4
 
 packages:
 
@@ -27,34 +24,6 @@ packages:
 
   '@types/node@22.13.10':
     resolution: {integrity: sha512-I6LPUvlRH+O6VRUqYOcMudhaIdUVWfsjnZavnsraHvpBwaEyMN29ry+0UVJhImYL16xsscu0aske3yA+uPOWfw==}
-
-  endform-darwin-arm64@0.8.4:
-    resolution: {integrity: sha512-bc/h6L133O8flP/l68QNbrM0qlXg0N2PbXkimAU7mqzHmQvntYXzR4j7XKGgQH6yvDKXYl2gQ34fxFdzRJbfEg==}
-    cpu: [arm64]
-    os: [darwin]
-    hasBin: true
-
-  endform-darwin-x86@0.8.4:
-    resolution: {integrity: sha512-Id4DUVovrjzZWMrJrhPmrHa1uAZlvRUjPaWeg9MkAQRTV847+ACF46QgkyDy5G4DTa+hOLyd/iT9Sr3HI0Dh+g==}
-    cpu: [x86]
-    os: [darwin]
-    hasBin: true
-
-  endform-linux-arm64@0.8.4:
-    resolution: {integrity: sha512-R4Ca2NTAOmmsd8AQUiRO8546IxAipuui7wMfaB5MWz425UmmovKRWDWVcMuYPw1w6Z5gPvKOkpohKiY/c6HXmQ==}
-    cpu: [arm64]
-    os: [linux]
-    hasBin: true
-
-  endform-linux-x86@0.8.4:
-    resolution: {integrity: sha512-+vj8FLCHtZEfP7WTYhAUELALycEfE/bujHb39Tv+QZlnz50OgTm6wMOM8PLluoY+deIBPR2qVOCzzvpboUAylA==}
-    cpu: [x86]
-    os: [linux]
-    hasBin: true
-
-  endform@0.8.4:
-    resolution: {integrity: sha512-BK8z4mqohx5YZoOB2xvGcDcyvdrUtaOum4gIkaV/otg3N+/R90J82QkEKdvVC0HPshF/LfYy9Ygd4bPenZ4POQ==}
-    hasBin: true
 
   fsevents@2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
@@ -83,25 +52,6 @@ snapshots:
   '@types/node@22.13.10':
     dependencies:
       undici-types: 6.20.0
-
-  endform-darwin-arm64@0.8.4:
-    optional: true
-
-  endform-darwin-x86@0.8.4:
-    optional: true
-
-  endform-linux-arm64@0.8.4:
-    optional: true
-
-  endform-linux-x86@0.8.4:
-    optional: true
-
-  endform@0.8.4:
-    optionalDependencies:
-      endform-darwin-arm64: 0.8.4
-      endform-darwin-x86: 0.8.4
-      endform-linux-arm64: 0.8.4
-      endform-linux-x86: 0.8.4
 
   fsevents@2.3.2:
     optional: true
