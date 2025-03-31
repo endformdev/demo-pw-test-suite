@@ -9,7 +9,7 @@
 		"@types/node": "22.13.10"
 	},
 	"dependencies": {
-		"endform": "0.8.3",
+		"endform": "0.8.4",
 		"endform-linux-x86": "0.7.1"
 	}
 }
