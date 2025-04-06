@@ -1,12 +1,12 @@
-import { defineConfig, devices } from "@playwright/test"
+import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
 	testDir: "./tests",
 	fullyParallel: true,
 	forbidOnly: !!process.env.CI,
 	retries: process.env.CI ? 2 : 0,
-	timeout: 3 * 60 * 1000,
+	timeout: 2 * 60 * 1000,
 
-	reporter: [["list"]],
+	reporter: [["list"], ["html"]],
 	use: {
 		trace: "on-first-retry",
 	},
@@ -17,4 +17,4 @@ export default defineConfig({
 			use: { ...devices["Desktop Chrome"] },
 		},
 	],
-})
+});
