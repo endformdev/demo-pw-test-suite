@@ -8,7 +8,7 @@ export default defineConfig({
 
 	reporter: [["list"], ["html"]],
 	use: {
-		trace: "on-first-retry",
+		trace: "retain-on-failure",
 	},
 
 	projects: [
