@@ -6,7 +6,7 @@ export default defineConfig({
 	retries: process.env.CI ? 2 : 0,
 	timeout: 2 * 60 * 1000,
 
-	reporter: [["list"], ["html"]],
+	reporter: [["list"]],
 	use: {
 		trace: "retain-on-failure",
 	},
