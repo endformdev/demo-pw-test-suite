@@ -1,5 +1,5 @@
-import fs from "fs"
-import path from "path"
+import fs from "node:fs"
+import path from "node:path"
 
 // Array of test types with variations to ensure diversity
 const testTypes = [
