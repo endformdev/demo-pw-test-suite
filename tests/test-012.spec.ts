@@ -13,7 +13,7 @@ import {
  */
 test("ui-authentication-test-12", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 10
+	const complexityFactor = 4
 
 	// Test scenario 12
 	await runComplexTestScenario(page, complexityFactor)

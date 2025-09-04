@@ -11,7 +11,7 @@ import {
  */
 test("e2e-settings-test-40", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 6
+	const complexityFactor = 2
 
 	// Test scenario 40
 	await runComplexTestScenario(page, complexityFactor)

@@ -10,7 +10,7 @@ import {
  */
 test("navigation-dashboard-test-5", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 3
+	const complexityFactor = 1
 
 	// Test scenario 5
 	await runComplexTestScenario(page, complexityFactor)

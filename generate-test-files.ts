@@ -29,7 +29,7 @@ const featureAreas = [
 	"profile",
 ]
 
-const TEST_COUNT = 50
+const TEST_COUNT = 100
 
 /**
  * Odd count up from 1 to 5, then restart.
@@ -69,7 +69,9 @@ import {
  */
 test("${testName}", async ({ page }) => {
   // Add complexity variations based on test number to ensure diversity
-  const complexityFactor = ${calculateComplexityFactor(index + 1)};
+  const complexityFactor = ${Math.ceil(
+		calculateComplexityFactor(index + 1) / 3
+	)};
 
   // Test scenario ${index + 1}
   await runComplexTestScenario(page, complexityFactor);

@@ -13,7 +13,7 @@ import {
  */
 test("performance-reports-test-43", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 2
+	const complexityFactor = 1
 
 	// Test scenario 43
 	await runComplexTestScenario(page, complexityFactor)

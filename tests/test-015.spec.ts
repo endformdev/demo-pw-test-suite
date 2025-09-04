@@ -12,7 +12,7 @@ import {
  */
 test("navigation-authentication-test-15", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 3
+	const complexityFactor = 1
 
 	// Test scenario 15
 	await runComplexTestScenario(page, complexityFactor)

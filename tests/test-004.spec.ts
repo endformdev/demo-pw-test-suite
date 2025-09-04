@@ -11,7 +11,7 @@ import {
  */
 test("interaction-dashboard-test-4", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 9
+	const complexityFactor = 3
 
 	// Test scenario 4
 	await runComplexTestScenario(page, complexityFactor)

@@ -11,7 +11,7 @@ import {
  */
 test("form-user-management-test-26", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 8
+	const complexityFactor = 3
 
 	// Test scenario 26
 	await runComplexTestScenario(page, complexityFactor)

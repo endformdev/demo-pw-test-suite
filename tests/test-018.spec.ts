@@ -13,7 +13,7 @@ import {
  */
 test("visual-authentication-test-18", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 7
+	const complexityFactor = 3
 
 	// Test scenario 18
 	await runComplexTestScenario(page, complexityFactor)

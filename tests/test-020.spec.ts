@@ -12,7 +12,7 @@ import {
  */
 test("e2e-authentication-test-20", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 6
+	const complexityFactor = 2
 
 	// Test scenario 20
 	await runComplexTestScenario(page, complexityFactor)
