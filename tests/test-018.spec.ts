@@ -13,7 +13,7 @@ import {
  */
 test("visual-authentication-test-18", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 3
+	const complexityFactor = 7
 
 	// Test scenario 18
 	await runComplexTestScenario(page, complexityFactor)
@@ -22,12 +22,12 @@ test("visual-authentication-test-18", async ({ page }) => {
 	await test.step("Performing visual-specific operations", async () => {
 		await simulateNetworkDelay(
 			page,
-			500 * complexityFactor,
-			1500 * complexityFactor
+			50 * complexityFactor,
+			100 * complexityFactor
 		)
 		await simulateHeavyComputation(complexityFactor + 1)
 
-		await performCanvasOperations(page, 2 * complexityFactor)
+		await performCanvasOperations(page, complexityFactor)
 	})
 
 	// Feature area specific tests
@@ -40,7 +40,7 @@ test("visual-authentication-test-18", async ({ page }) => {
 	// Final assertions and validations
 	await test.step("Verifying results", async () => {
 		// Simulate final verifications
-		await simulateNetworkDelay(page, 500, 1500)
+		await simulateNetworkDelay(page, 100, 150)
 
 		// Create a dynamic verification point
 		await page.evaluate((testIndex) => {

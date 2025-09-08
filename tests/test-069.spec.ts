@@ -13,7 +13,7 @@ import {
  */
 test("component-search-test-69", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 2
+	const complexityFactor = 5
 
 	// Test scenario 69
 	await runComplexTestScenario(page, complexityFactor)
@@ -22,12 +22,12 @@ test("component-search-test-69", async ({ page }) => {
 	await test.step("Performing component-specific operations", async () => {
 		await simulateNetworkDelay(
 			page,
-			500 * complexityFactor,
-			1500 * complexityFactor
+			50 * complexityFactor,
+			100 * complexityFactor
 		)
 		await simulateHeavyComputation(complexityFactor + 1)
 
-		await performComplexDOMOperations(page, 40 * complexityFactor)
+		await performComplexDOMOperations(page, 10 * complexityFactor)
 	})
 
 	// Feature area specific tests
@@ -39,7 +39,7 @@ test("component-search-test-69", async ({ page }) => {
 	// Final assertions and validations
 	await test.step("Verifying results", async () => {
 		// Simulate final verifications
-		await simulateNetworkDelay(page, 500, 1500)
+		await simulateNetworkDelay(page, 100, 150)
 
 		// Create a dynamic verification point
 		await page.evaluate((testIndex) => {

@@ -11,7 +11,7 @@ import {
  */
 test("form-settings-test-36", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 3
+	const complexityFactor = 8
 
 	// Test scenario 36
 	await runComplexTestScenario(page, complexityFactor)
@@ -20,12 +20,12 @@ test("form-settings-test-36", async ({ page }) => {
 	await test.step("Performing form-specific operations", async () => {
 		await simulateNetworkDelay(
 			page,
-			500 * complexityFactor,
-			1500 * complexityFactor
+			50 * complexityFactor,
+			100 * complexityFactor
 		)
 		await simulateHeavyComputation(complexityFactor + 1)
 
-		await fillFormWithValidation(page, 15 * complexityFactor)
+		await fillFormWithValidation(page, 5 * complexityFactor)
 	})
 
 	// Feature area specific tests
@@ -36,7 +36,7 @@ test("form-settings-test-36", async ({ page }) => {
 	// Final assertions and validations
 	await test.step("Verifying results", async () => {
 		// Simulate final verifications
-		await simulateNetworkDelay(page, 500, 1500)
+		await simulateNetworkDelay(page, 100, 150)
 
 		// Create a dynamic verification point
 		await page.evaluate((testIndex) => {

@@ -11,7 +11,7 @@ import {
  */
 test("navigation-reports-test-45", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 1
+	const complexityFactor = 3
 
 	// Test scenario 45
 	await runComplexTestScenario(page, complexityFactor)
@@ -20,8 +20,8 @@ test("navigation-reports-test-45", async ({ page }) => {
 	await test.step("Performing navigation-specific operations", async () => {
 		await simulateNetworkDelay(
 			page,
-			500 * complexityFactor,
-			1500 * complexityFactor
+			50 * complexityFactor,
+			100 * complexityFactor
 		)
 		await simulateHeavyComputation(complexityFactor + 1)
 
@@ -42,7 +42,7 @@ test("navigation-reports-test-45", async ({ page }) => {
 	// Final assertions and validations
 	await test.step("Verifying results", async () => {
 		// Simulate final verifications
-		await simulateNetworkDelay(page, 500, 1500)
+		await simulateNetworkDelay(page, 100, 150)
 
 		// Create a dynamic verification point
 		await page.evaluate((testIndex) => {

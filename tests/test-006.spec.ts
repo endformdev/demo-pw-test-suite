@@ -11,7 +11,7 @@ import {
  */
 test("form-dashboard-test-6", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 3
+	const complexityFactor = 8
 
 	// Test scenario 6
 	await runComplexTestScenario(page, complexityFactor)
@@ -20,12 +20,12 @@ test("form-dashboard-test-6", async ({ page }) => {
 	await test.step("Performing form-specific operations", async () => {
 		await simulateNetworkDelay(
 			page,
-			500 * complexityFactor,
-			1500 * complexityFactor
+			50 * complexityFactor,
+			100 * complexityFactor
 		)
 		await simulateHeavyComputation(complexityFactor + 1)
 
-		await fillFormWithValidation(page, 15 * complexityFactor)
+		await fillFormWithValidation(page, 5 * complexityFactor)
 	})
 
 	// Feature area specific tests
@@ -36,7 +36,7 @@ test("form-dashboard-test-6", async ({ page }) => {
 				.getByPlaceholder("What needs to be done?")
 				.fill(`Task ${i + 1}`)
 			await page.getByPlaceholder("What needs to be done?").press("Enter")
-			await simulateNetworkDelay(page, 100, 300)
+			await simulateNetworkDelay(page, 50, 100)
 		}
 		await expect(page.getByTestId("todo-title")).toHaveCount(
 			5 * complexityFactor
@@ -46,7 +46,7 @@ test("form-dashboard-test-6", async ({ page }) => {
 	// Final assertions and validations
 	await test.step("Verifying results", async () => {
 		// Simulate final verifications
-		await simulateNetworkDelay(page, 500, 1500)
+		await simulateNetworkDelay(page, 100, 150)
 
 		// Create a dynamic verification point
 		await page.evaluate((testIndex) => {

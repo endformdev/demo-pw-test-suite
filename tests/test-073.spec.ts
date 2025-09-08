@@ -13,7 +13,7 @@ import {
  */
 test("performance-notifications-test-73", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 1
+	const complexityFactor = 2
 
 	// Test scenario 73
 	await runComplexTestScenario(page, complexityFactor)
@@ -22,12 +22,12 @@ test("performance-notifications-test-73", async ({ page }) => {
 	await test.step("Performing performance-specific operations", async () => {
 		await simulateNetworkDelay(
 			page,
-			500 * complexityFactor,
-			1500 * complexityFactor
+			50 * complexityFactor,
+			100 * complexityFactor
 		)
 		await simulateHeavyComputation(complexityFactor + 1)
 
-		await performComplexDOMOperations(page, 30 * complexityFactor)
+		await performComplexDOMOperations(page, 20 * complexityFactor)
 		await simulateApiRequests(page, complexityFactor)
 		await performCanvasOperations(page, complexityFactor)
 	})
@@ -40,7 +40,7 @@ test("performance-notifications-test-73", async ({ page }) => {
 	// Final assertions and validations
 	await test.step("Verifying results", async () => {
 		// Simulate final verifications
-		await simulateNetworkDelay(page, 500, 1500)
+		await simulateNetworkDelay(page, 100, 150)
 
 		// Create a dynamic verification point
 		await page.evaluate((testIndex) => {

@@ -69,42 +69,40 @@ import {
  */
 test("${testName}", async ({ page }) => {
   // Add complexity variations based on test number to ensure diversity
-  const complexityFactor = ${Math.ceil(
-		calculateComplexityFactor(index + 1) / 3
-	)};
+  const complexityFactor = ${calculateComplexityFactor(index + 1)};
 
   // Test scenario ${index + 1}
   await runComplexTestScenario(page, complexityFactor);
 
   // Additional test-specific operations
   await test.step("Performing ${testType}-specific operations", async () => {
-    await simulateNetworkDelay(page, 500 * complexityFactor, 1500 * complexityFactor);
+    await simulateNetworkDelay(page, 50 * complexityFactor, 100 * complexityFactor);
     await simulateHeavyComputation(complexityFactor + 1);
 
     ${
 			testType === "ui" || testType === "component"
-				? `await performComplexDOMOperations(page, 40 * complexityFactor);`
+				? `await performComplexDOMOperations(page, 10 * complexityFactor);`
 				: ""
 		}
     ${
 			testType === "form"
-				? `await fillFormWithValidation(page, 15 * complexityFactor);`
+				? `await fillFormWithValidation(page, 5 * complexityFactor);`
 				: ""
 		}
     ${
 			testType === "api"
-				? `await simulateApiRequests(page, 2 * complexityFactor);`
+				? `await simulateApiRequests(page, complexityFactor);`
 				: ""
 		}
     ${
 			testType === "visual"
-				? `await performCanvasOperations(page, 2 * complexityFactor);`
+				? `await performCanvasOperations(page, complexityFactor);`
 				: ""
 		}
     ${
 			testType === "performance"
 				? `
-    await performComplexDOMOperations(page, 30 * complexityFactor);
+    await performComplexDOMOperations(page, 20 * complexityFactor);
     await simulateApiRequests(page, complexityFactor);
     await performCanvasOperations(page, complexityFactor);
     `
@@ -112,7 +110,7 @@ test("${testName}", async ({ page }) => {
 		}
     ${
 			testType === "interaction"
-				? `await simulateLargeDataInteraction(page, 200 * complexityFactor);`
+				? `await simulateLargeDataInteraction(page, 30 * complexityFactor);`
 				: ""
 		}
     ${
@@ -136,7 +134,7 @@ test("${testName}", async ({ page }) => {
     for (let i = 0; i < 5 * complexityFactor; i++) {
       await page.getByPlaceholder("What needs to be done?").fill(\`Task \${i + 1}\`);
       await page.getByPlaceholder("What needs to be done?").press("Enter");
-      await simulateNetworkDelay(page, 100, 300);
+      await simulateNetworkDelay(page, 50, 100);
     }
     await expect(page.getByTestId("todo-title")).toHaveCount(5 * complexityFactor);
     `
@@ -202,7 +200,7 @@ test("${testName}", async ({ page }) => {
   // Final assertions and validations
   await test.step("Verifying results", async () => {
     // Simulate final verifications
-    await simulateNetworkDelay(page, 500, 1500);
+    await simulateNetworkDelay(page, 100, 150);
 
     // Create a dynamic verification point
     await page.evaluate((testIndex) => {

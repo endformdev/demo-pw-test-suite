@@ -12,7 +12,7 @@ import {
  */
 test("e2e-authentication-test-20", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 2
+	const complexityFactor = 6
 
 	// Test scenario 20
 	await runComplexTestScenario(page, complexityFactor)
@@ -21,8 +21,8 @@ test("e2e-authentication-test-20", async ({ page }) => {
 	await test.step("Performing e2e-specific operations", async () => {
 		await simulateNetworkDelay(
 			page,
-			500 * complexityFactor,
-			1500 * complexityFactor
+			50 * complexityFactor,
+			100 * complexityFactor
 		)
 		await simulateHeavyComputation(complexityFactor + 1)
 	})
@@ -37,7 +37,7 @@ test("e2e-authentication-test-20", async ({ page }) => {
 	// Final assertions and validations
 	await test.step("Verifying results", async () => {
 		// Simulate final verifications
-		await simulateNetworkDelay(page, 500, 1500)
+		await simulateNetworkDelay(page, 100, 150)
 
 		// Create a dynamic verification point
 		await page.evaluate((testIndex) => {
