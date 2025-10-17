@@ -6,8 +6,8 @@
 		"generate": "bun generate-test-files && biome check --write --unsafe tests"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.2",
-		"@playwright/test": "1.55.0",
-		"@types/node": "22.15.18"
+		"@biomejs/biome": "2.2.6",
+		"@playwright/test": "1.56.1",
+		"@types/node": "24.8.1"
 	}
 }
