@@ -29,7 +29,7 @@ const featureAreas = [
 	"profile",
 ]
 
-const TEST_COUNT = 100
+const TEST_COUNT = 200
 
 /**
  * Odd count up from 1 to 5, then restart.
