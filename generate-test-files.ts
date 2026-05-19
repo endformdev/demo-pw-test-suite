@@ -30,15 +30,17 @@ const featureAreas = [
 ]
 
 const TEST_COUNT = 200
+const COMPLEXITY_MAX = 4
 
 /**
- * Odd count up from 1 to 5, then restart.
- * Event count down from 10 to 6, then restart.
+ * Odd count up from 1 to first half, then restart.
+ * Event count down from COMPLEXITY_MAX to half, then restart.
  * This ensure fast tests are paired with slow tests when sharding.
  */
 function calculateComplexityFactor(n: number) {
-	if (n % 2 === 0) return 11 - (((n - 1) % 10) + 1) / 2
-	return ((n % 10) + 1) / 2
+	if (n % 2 === 0)
+		return COMPLEXITY_MAX + 1 - (((n - 1) % COMPLEXITY_MAX) + 1) / 2
+	return ((n % COMPLEXITY_MAX) + 1) / 2
 }
 
 // Generate a template for each test file
@@ -72,7 +74,9 @@ test("${testName}", async ({ page }) => {
   const complexityFactor = ${calculateComplexityFactor(index + 1)};
 
   // Test scenario ${index + 1}
-  await runComplexTestScenario(page, complexityFactor);
+	await test.step("Running complex test scenario", async () => {
+  	await runComplexTestScenario(page, complexityFactor);
+	});
 
   // Additional test-specific operations
   await test.step("Performing ${testType}-specific operations", async () => {

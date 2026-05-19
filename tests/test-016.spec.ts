@@ -13,10 +13,12 @@ import {
  */
 test("form-authentication-test-16", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 8
+	const complexityFactor = 3
 
 	// Test scenario 16
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing form-specific operations", async () => {

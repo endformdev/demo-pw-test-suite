@@ -11,10 +11,12 @@ import {
  */
 test("visual-dashboard-test-8", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 7
+	const complexityFactor = 3
 
 	// Test scenario 8
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing visual-specific operations", async () => {

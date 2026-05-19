@@ -11,10 +11,12 @@ import {
  */
 test("accessibility-profile-test-97", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 4
+	const complexityFactor = 1
 
 	// Test scenario 97
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing accessibility-specific operations", async () => {

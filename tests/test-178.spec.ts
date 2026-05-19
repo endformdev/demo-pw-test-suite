@@ -12,10 +12,12 @@ import {
  */
 test("visual-notifications-test-178", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 7
+	const complexityFactor = 4
 
 	// Test scenario 178
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing visual-specific operations", async () => {

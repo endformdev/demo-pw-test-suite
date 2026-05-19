@@ -12,10 +12,12 @@ import {
  */
 test("interaction-user-management-test-24", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 9
+	const complexityFactor = 3
 
 	// Test scenario 24
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing interaction-specific operations", async () => {

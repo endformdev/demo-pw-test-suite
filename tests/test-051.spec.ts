@@ -12,10 +12,12 @@ import {
  */
 test("api-analytics-test-51", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 1
+	const complexityFactor = 2
 
 	// Test scenario 51
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing api-specific operations", async () => {

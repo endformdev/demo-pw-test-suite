@@ -15,7 +15,9 @@ test("api-user-management-test-121", async ({ page }) => {
 	const complexityFactor = 1
 
 	// Test scenario 121
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing api-specific operations", async () => {

@@ -12,10 +12,12 @@ import {
  */
 test("accessibility-billing-test-187", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 4
+	const complexityFactor = 2
 
 	// Test scenario 187
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing accessibility-specific operations", async () => {

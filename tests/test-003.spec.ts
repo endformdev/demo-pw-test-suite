@@ -16,7 +16,9 @@ test("performance-dashboard-test-3", async ({ page }) => {
 	const complexityFactor = 2
 
 	// Test scenario 3
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing performance-specific operations", async () => {

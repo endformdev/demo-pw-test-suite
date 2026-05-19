@@ -11,10 +11,12 @@ import {
  */
 test("component-dashboard-test-9", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 5
+	const complexityFactor = 1
 
 	// Test scenario 9
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing component-specific operations", async () => {

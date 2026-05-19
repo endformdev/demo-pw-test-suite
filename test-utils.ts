@@ -428,10 +428,12 @@ export async function loadHeavyResources(
 		return container.id
 	}, resourceCount)
 
-	// Wait for all resources to be loaded
-	for (let i = 0; i < resourceCount; i++) {
-		await page.waitForSelector(`#resource-${i}`, { timeout: 10000 })
-	}
+	// Wait for all resources to be loaded in parallel
+	await Promise.all(
+		Array.from({ length: resourceCount }, (_, i) =>
+			page.waitForSelector(`#resource-${i}`, { timeout: 10000 })
+		)
+	)
 
 	// Cleanup
 	await page.evaluate(() => {
@@ -450,52 +452,34 @@ export async function runComplexTestScenario(
 	complexityFactor: number
 ): Promise<void> {
 	// Step 1: Navigate to a page and wait for it to load
-	// console.time("ssteeep-1")
 	await page.goto("https://playwright.dev/")
 	await expect(page).toHaveTitle(/Playwright/)
-	// console.timeEnd("ssteeep-1")
 
 	// Step 2: Perform DOM manipulations
-	// console.time("ssteeep-2")
-	await performComplexDOMOperations(page, 25 * complexityFactor)
-	// console.timeEnd("ssteeep-2")
+	await performComplexDOMOperations(page, 12 * complexityFactor)
 
 	// Step 3: Simulate network delays and API calls
-	// console.time("ssteeep-3")
-	await simulateApiRequests(page, 2 + complexityFactor)
-	// console.timeEnd("ssteeep-3")
+	await simulateApiRequests(page, 1 + complexityFactor)
 
 	// Step 4: Perform CPU-intensive operations
-	// console.time("ssteeep-4")
 	await simulateHeavyComputation(complexityFactor)
-	// console.timeEnd("ssteeep-4")
 
 	// Step 5: Interact with form elements
-	// console.time("ssteeep-5")
-	await fillFormWithValidation(page, 5 + complexityFactor)
-	// console.timeEnd("ssteeep-5")
+	await fillFormWithValidation(page, 3 + complexityFactor)
 
 	// Step 6: Canvas operations for visual rendering load
-	// console.time("ssteeep-6")
-	await performCanvasOperations(page, Math.ceil(complexityFactor / 2))
-	// console.timeEnd("ssteeep-6")
+	await performCanvasOperations(page, Math.ceil(complexityFactor / 4))
 
 	// Step 7: Simulate scrolling through large datasets
-	// console.time("ssteeep-7")
-	await simulateLargeDataInteraction(page, 50 * complexityFactor)
-	// console.timeEnd("ssteeep-7")
+	await simulateLargeDataInteraction(page, 25 * complexityFactor)
 
 	// Step 8: Load heavy resources
-	// console.time("ssteeep-8")
-	await loadHeavyResources(page, Math.ceil(complexityFactor / 2))
-	// console.timeEnd("ssteeep-8")
+	await loadHeavyResources(page, Math.ceil(complexityFactor / 4))
 
 	// Additional network delay to ensure total test time is adequate
-	// console.time("ssteeep-9")
 	await simulateNetworkDelay(
 		page,
 		100 * complexityFactor,
 		200 * complexityFactor
 	)
-	// console.timeEnd("ssteeep-9")
 }

@@ -12,10 +12,12 @@ import {
  */
 test("e2e-search-test-70", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 6
+	const complexityFactor = 4
 
 	// Test scenario 70
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing e2e-specific operations", async () => {

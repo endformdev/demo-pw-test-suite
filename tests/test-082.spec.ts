@@ -13,10 +13,12 @@ import {
  */
 test("ui-billing-test-82", async ({ page }) => {
 	// Add complexity variations based on test number to ensure diversity
-	const complexityFactor = 10
+	const complexityFactor = 4
 
 	// Test scenario 82
-	await runComplexTestScenario(page, complexityFactor)
+	await test.step("Running complex test scenario", async () => {
+		await runComplexTestScenario(page, complexityFactor)
+	})
 
 	// Additional test-specific operations
 	await test.step("Performing ui-specific operations", async () => {
