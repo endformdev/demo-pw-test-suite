@@ -11,9 +11,6 @@ importers:
       endform:
         specifier: 0.64.1
         version: 0.64.1
-      node:
-        specifier: runtime:^24.15.0
-        version: runtime:24.15.0
     devDependencies:
       '@biomejs/biome':
         specifier: 2.4.15
@@ -24,6 +21,9 @@ importers:
       '@types/node':
         specifier: 25.9.0
         version: 25.9.0
+      node:
+        specifier: runtime:^24.15.0
+        version: runtime:24.15.0
 
 packages:
 
