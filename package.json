@@ -1,6 +1,6 @@
 {
 	"name": "demo-pw-test-suite",
-	"packageManager": "pnpm@11.0.0",
+	"packageManager": "pnpm@11.3.0",
 	"scripts": {
 		"test": "playwright test",
 		"generate": "bun generate-test-files && biome check --write --unsafe tests"
@@ -8,15 +8,15 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.4.15",
 		"@playwright/test": "1.60.0",
-		"@types/node": "25.9.0"
+		"@types/node": "25.9.1"
 	},
 	"dependencies": {
-		"endform": "0.64.1"
+		"endform": "0.65.1"
 	},
 	"devEngines": {
 		"runtime": {
 			"name": "node",
-			"version": "^24.15.0",
+			"version": "^24.16.0",
 			"onFail": "download"
 		}
 	}

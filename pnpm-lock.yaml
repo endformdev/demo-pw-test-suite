@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       endform:
-        specifier: 0.64.1
-        version: 0.64.1
+        specifier: 0.65.1
+        version: 0.65.1
     devDependencies:
       '@biomejs/biome':
         specifier: 2.4.15
@@ -19,11 +19,11 @@ importers:
         specifier: 1.60.0
         version: 1.60.0
       '@types/node':
-        specifier: 25.9.0
-        version: 25.9.0
+        specifier: 25.9.1
+        version: 25.9.1
       node:
-        specifier: runtime:^24.15.0
-        version: runtime:24.15.0
+        specifier: runtime:^24.16.0
+        version: runtime:24.16.0
 
 packages:
 
@@ -89,31 +89,31 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@types/node@25.9.0':
-    resolution: {integrity: sha512-AOQwYUNolgy3VosiRqXrACUXTN8nJUtPl7FJXMqZVyxiiCLhQuG3jXKvCS1ALr+Y2OmZhzzLVlYPEqJaiqkaJQ==}
+  '@types/node@25.9.1':
+    resolution: {integrity: sha512-xfrlY7UD5rMJk3ZVJP8BNzS28J36YJg+xp+LPXV1TdWxr8uMH5A860QNxYDGQe/ylDSgjxE52Q9VnO7p75tJxg==}
 
-  endform-darwin-arm64@0.64.1:
-    resolution: {integrity: sha512-vUl1r0xRiCqZmMBXAqgrB851vbOHi8qKGoUH6oVRxw1dfw6RwcyfdwGFJyJvceKbMzLcZxnL6dyt+1y51h4Jow==}
+  endform-darwin-arm64@0.65.1:
+    resolution: {integrity: sha512-1uUcCBJ8ermlRZCcvENJMUdxikaLKkJ4Kt9WjBWDRDu3tl33odj+FvFVvQ1E/RKOj8cOY+cypqN/GZLAVmZBQQ==}
     cpu: [arm64]
     os: [darwin]
 
-  endform-darwin-x86@0.64.1:
-    resolution: {integrity: sha512-hpSwDgYNDCgz88sVYpjeKEs3yjMtURuhiDmIqX+NR3NWc6ofp/Mw1UISYdlZPe9GPRc0O9UBGqI8rkCLgSZ/5g==}
+  endform-darwin-x86@0.65.1:
+    resolution: {integrity: sha512-/WIK7cnITze8cmiMud0gO9QZr//qgFyG+WAj+O45dxAnf1/N6R5gT9f2ya9BlevzQW7dHk6+IUTLABmakC0yZA==}
     cpu: [x64]
     os: [darwin]
 
-  endform-linux-arm64@0.64.1:
-    resolution: {integrity: sha512-TeFKAnQmTJt7sqLZiCjGy1aUbe1iXiwLXF1NzOHr4aVuDWwakMz72tlpD1Rr03IDpAtJLnV+r0AYzdDgQDtUMw==}
+  endform-linux-arm64@0.65.1:
+    resolution: {integrity: sha512-RmcqwhNo6djUwC4OZ6xiyaP6RmnFtbj2vOk9h13qMinL1rh4iwGJqKRGJaCgOByZiSg3Kw3DuJCo2E0BpNnblQ==}
     cpu: [arm64]
     os: [linux]
 
-  endform-linux-x86@0.64.1:
-    resolution: {integrity: sha512-LnqXiCWsB6FaR0BxL6qbIVAgrZ7bRfvhw6E+y0AxvyGoFbmKUr9j7nLkZtAqvrnKnjscbFJBJx7RwgPBCyB7Kw==}
+  endform-linux-x86@0.65.1:
+    resolution: {integrity: sha512-4tjSaEUqm6SCz9hffd/QpaoZONpJt9mRWjEbtLYxpcmWOtQj5mT5KsadSPP5wPdrLR6pkuWTKV8OJX945TWECA==}
     cpu: [x64]
     os: [linux]
 
-  endform@0.64.1:
-    resolution: {integrity: sha512-Lo05xXl3jOKr0WECIhqgwI4+x7DoDCTMgzLDeLS/dTzoM/lcx3I1Y3Rcg6QLMUTA4LGuXoEnL6mvOrAEokGXWg==}
+  endform@0.65.1:
+    resolution: {integrity: sha512-4CM6FMJFzRtqzONoI4/Uy8Hk5eD74E0WipK3lX2MikF5IX6RMLcsQqClpw3fng74VV8xZCZlJM5Y7HfuvtHegA==}
     hasBin: true
 
   fsevents@2.3.2:
@@ -121,7 +121,7 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  node@runtime:24.15.0:
+  node@runtime:24.16.0:
     resolution:
       type: variations
       variants:
@@ -129,9 +129,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-3UvHfctfTJoslkNzm7WTUAzLCUE+xCyqD47w5e8RYJU=
+            integrity: sha256-MN/Y5EMiwnEoE/JeFjwlPK1TvkPgmJB7i1NIvxdKSWg=
             type: binary
-            url: https://nodejs.org/download/release/v24.15.0/node-v24.15.0-aix-ppc64.tar.gz
+            url: https://nodejs.org/download/release/v24.16.0/node-v24.16.0-aix-ppc64.tar.gz
           targets:
             - cpu: ppc64
               os: aix
@@ -139,9 +139,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-NyMxuWl3mrXRW5SYhPxur4jVr+h73ouogdZAC5EA/8Q=
+            integrity: sha256-ORidq07rFXBsQkrwrAijBEyeSPfbEqfXf2t6r8fdXfY=
             type: binary
-            url: https://nodejs.org/download/release/v24.15.0/node-v24.15.0-darwin-arm64.tar.gz
+            url: https://nodejs.org/download/release/v24.16.0/node-v24.16.0-darwin-arm64.tar.gz
           targets:
             - cpu: arm64
               os: darwin
@@ -149,9 +149,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-/9XuKTRnkn8+5zGlU+uI/R9Iz3TuvC10prq+SvIoZzs=
+            integrity: sha256-KYtMezy4B2XIcD5CuQMkpOzjtmNJR7iedpw8mAq1UYU=
             type: binary
-            url: https://nodejs.org/download/release/v24.15.0/node-v24.15.0-darwin-x64.tar.gz
+            url: https://nodejs.org/download/release/v24.16.0/node-v24.16.0-darwin-x64.tar.gz
           targets:
             - cpu: x64
               os: darwin
@@ -159,9 +159,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-c6/CNNVYwkkZh19RwtHqACoq2k6m+DYBo4OGn++mTu0=
+            integrity: sha256-WJ9bbdT8/uTf2nMBOQPJZquqir2T28nUNlRORytPDnQ=
             type: binary
-            url: https://nodejs.org/download/release/v24.15.0/node-v24.15.0-linux-arm64.tar.gz
+            url: https://nodejs.org/download/release/v24.16.0/node-v24.16.0-linux-arm64.tar.gz
           targets:
             - cpu: arm64
               os: linux
@@ -169,9 +169,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-sfiJAKSxY2XqulYmkwT8Edp1gdvwNVLUSV+azh/AX20=
+            integrity: sha256-JStYIFNNwDBKKFQcmkRDfPpyAufyAiXSjUk5MsWOl6o=
             type: binary
-            url: https://nodejs.org/download/release/v24.15.0/node-v24.15.0-linux-ppc64le.tar.gz
+            url: https://nodejs.org/download/release/v24.16.0/node-v24.16.0-linux-ppc64le.tar.gz
           targets:
             - cpu: ppc64le
               os: linux
@@ -179,9 +179,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-+YVFVDnVL+m43mqPbQe/7MxzbepSfofqyv5ajXUWo4A=
+            integrity: sha256-Vnrwl1s0BVFrmx3cZEKaI+yMWi+mzwE5EmGkzHdOPt0=
             type: binary
-            url: https://nodejs.org/download/release/v24.15.0/node-v24.15.0-linux-s390x.tar.gz
+            url: https://nodejs.org/download/release/v24.16.0/node-v24.16.0-linux-s390x.tar.gz
           targets:
             - cpu: s390x
               os: linux
@@ -189,9 +189,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-RINoctmuxJ8ea1KpqSKHLbmisC0jWmFqVoG2qF/sjYk=
+            integrity: sha256-L69qOH6bYriI4hxU8BJJ+ydTf/7PGELyn0yRnQpZoP8=
             type: binary
-            url: https://nodejs.org/download/release/v24.15.0/node-v24.15.0-linux-x64.tar.gz
+            url: https://nodejs.org/download/release/v24.16.0/node-v24.16.0-linux-x64.tar.gz
           targets:
             - cpu: x64
               os: linux
@@ -199,10 +199,10 @@ packages:
             archive: zip
             bin:
               node: node.exe
-            integrity: sha256-yet0Au2ibiun5EtnJ/yFqN5WxQlbH3Hr0wYokiEaoRY=
-            prefix: node-v24.15.0-win-arm64
+            integrity: sha256-FINGEdTGs8BgVOcAdzK5BHTBbgsy85XgW1Wlce9xxtI=
+            prefix: node-v24.16.0-win-arm64
             type: binary
-            url: https://nodejs.org/download/release/v24.15.0/node-v24.15.0-win-arm64.zip
+            url: https://nodejs.org/download/release/v24.16.0/node-v24.16.0-win-arm64.zip
           targets:
             - cpu: arm64
               os: win32
@@ -210,10 +210,10 @@ packages:
             archive: zip
             bin:
               node: node.exe
-            integrity: sha256-zFFJ6r1Td5zh573FQBZDYi0MfmgAreGJKKdn6UC7DmI=
-            prefix: node-v24.15.0-win-x64
+            integrity: sha256-7aypvVjsjpIDfaxOh31S9rj0MLgcGLV+JktOL7ERzVY=
+            prefix: node-v24.16.0-win-x64
             type: binary
-            url: https://nodejs.org/download/release/v24.15.0/node-v24.15.0-win-x64.zip
+            url: https://nodejs.org/download/release/v24.16.0/node-v24.16.0-win-x64.zip
           targets:
             - cpu: x64
               os: win32
@@ -221,9 +221,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-MemKqWCgZ9qR7f/V2TvEZle10qgClhLDWfXyrABgFSo=
+            integrity: sha256-hd3ieqc1A7A9rfoEEKgABntOP3Avt/yqO+ryhN/Maek=
             type: binary
-            url: https://unofficial-builds.nodejs.org/download/release/v24.15.0/node-v24.15.0-linux-arm64-musl.tar.gz
+            url: https://unofficial-builds.nodejs.org/download/release/v24.16.0/node-v24.16.0-linux-arm64-musl.tar.gz
           targets:
             - cpu: arm64
               os: linux
@@ -232,14 +232,14 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-9Vr1vUicU0exE8pllMrgClSzC6V6xYdTJDEb/G9HYuM=
+            integrity: sha256-UN9djUdIktT3uQYWffNvd/W5OQj2PcUy3FaCGcq2WEE=
             type: binary
-            url: https://unofficial-builds.nodejs.org/download/release/v24.15.0/node-v24.15.0-linux-x64-musl.tar.gz
+            url: https://unofficial-builds.nodejs.org/download/release/v24.16.0/node-v24.16.0-linux-x64-musl.tar.gz
           targets:
             - cpu: x64
               os: linux
               libc: musl
-    version: 24.15.0
+    version: 24.16.0
     hasBin: true
 
   playwright-core@1.60.0:
@@ -296,33 +296,33 @@ snapshots:
     dependencies:
       playwright: 1.60.0
 
-  '@types/node@25.9.0':
+  '@types/node@25.9.1':
     dependencies:
       undici-types: 7.24.6
 
-  endform-darwin-arm64@0.64.1:
+  endform-darwin-arm64@0.65.1:
     optional: true
 
-  endform-darwin-x86@0.64.1:
+  endform-darwin-x86@0.65.1:
     optional: true
 
-  endform-linux-arm64@0.64.1:
+  endform-linux-arm64@0.65.1:
     optional: true
 
-  endform-linux-x86@0.64.1:
+  endform-linux-x86@0.65.1:
     optional: true
 
-  endform@0.64.1:
+  endform@0.65.1:
     optionalDependencies:
-      endform-darwin-arm64: 0.64.1
-      endform-darwin-x86: 0.64.1
-      endform-linux-arm64: 0.64.1
-      endform-linux-x86: 0.64.1
+      endform-darwin-arm64: 0.65.1
+      endform-darwin-x86: 0.65.1
+      endform-linux-arm64: 0.65.1
+      endform-linux-x86: 0.65.1
 
   fsevents@2.3.2:
     optional: true
 
-  node@runtime:24.15.0: {}
+  node@runtime:24.16.0: {}
 
   playwright-core@1.60.0: {}
 
