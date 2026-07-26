@@ -1,17 +1,17 @@
 {
 	"name": "demo-pw-test-suite",
-	"packageManager": "pnpm@11.3.0",
+	"packageManager": "pnpm@11.17.0",
 	"scripts": {
 		"test": "playwright test",
 		"generate": "bun generate-test-files && biome check --write --unsafe tests"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.5.1",
-		"@playwright/test": "1.61.1",
-		"@types/node": "26.0.1"
+		"@biomejs/biome": "2.5.5",
+		"@playwright/test": "1.62.0",
+		"@types/node": "26.1.1"
 	},
 	"dependencies": {
-		"endform": "0.71.0"
+		"endform": "0.73.0"
 	},
 	"devEngines": {
 		"runtime": {
