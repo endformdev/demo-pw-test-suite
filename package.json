@@ -6,17 +6,17 @@
 		"generate": "bun generate-test-files && biome check --write --unsafe tests"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.5.11",
-		"@playwright/test": "1.62.1",
-		"@types/node": "26.4.1"
+		"@biomejs/biome": "2.5.13",
+		"@playwright/test": "1.63.0",
+		"@types/node": "26.6.0"
 	},
 	"dependencies": {
-		"endform": "0.76.0"
+		"endform": "0.77.0"
 	},
 	"devEngines": {
 		"runtime": {
 			"name": "node",
-			"version": "^24.20.0",
+			"version": "^24.21.0",
 			"onFail": "download"
 		}
 	}
