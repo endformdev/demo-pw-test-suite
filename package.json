@@ -11,7 +11,7 @@
 		"@types/node": "26.6.0"
 	},
 	"dependencies": {
-		"endform": "0.77.0"
+		"endform": "0.81.3"
 	},
 	"devEngines": {
 		"runtime": {
