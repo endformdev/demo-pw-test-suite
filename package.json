@@ -1,6 +1,6 @@
 {
 	"name": "demo-pw-test-suite",
-	"packageManager": "pnpm@11.17.0",
+	"packageManager": "pnpm@12.15.0",
 	"scripts": {
 		"test": "playwright test",
 		"generate": "bun generate-test-files && biome check --write --unsafe tests"
