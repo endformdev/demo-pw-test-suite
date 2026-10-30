@@ -10,7 +10,7 @@ export default defineConfig({
 
 	reporter: [["list"]],
 	use: {
-		trace: "retain-on-failure",
+		trace: "off",
 	},
 
 	projects: [
